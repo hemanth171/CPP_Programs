@@ -14,24 +14,28 @@
 
 using namespace std;
 
-void solution(){
-    /* code */
-}
-
 int main(int argc, char const *argv[])
 {
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
     
     int t;
+    int out=0;
     cin >> t;
+    string in;
     while(t--){
-        solution();
+        cin >> in;
+        if(in == "X++" || in == "++X"){
+            out++;
+        } else if(in == "X--" || in == "--X"){
+            out--;
+        }
     }
+    cout << out << "\n";
     
     return 0;
 }

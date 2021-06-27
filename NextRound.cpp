@@ -14,24 +14,36 @@
 
 using namespace std;
 
-void solution(){
-    /* code */
-}
-
 int main(int argc, char const *argv[])
 {
-    #ifndef ONLINE_JUDGE
-    freopen("input.txt", "r", stdin);
-    freopen("output.txt", "w", stdout);
-    #endif
+    // #ifndef ONLINE_JUDGE
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    // #endif
     ios_base::sync_with_stdio(false);
     cin.tie(NULL); cout.tie(NULL);
     
-    int t;
-    cin >> t;
-    while(t--){
-        solution();
+    int t,k,a,kpos;
+    int out=0;
+    cin >> t >> k;
+    vector<int> v(t);
+    for(int i=0;i<t;i++){
+        cin >> a;
+        v[i] = a;
+        if(i == k-1){
+            kpos=a;
+        }
     }
+    for(int i=0;i<t;i++){
+        if(v[i]!=0){
+            if(v[i]>=kpos){
+                out++;
+            } else {
+                break;
+            }
+        }
+    }
+    cout << out << "\n";
     
     return 0;
 }
