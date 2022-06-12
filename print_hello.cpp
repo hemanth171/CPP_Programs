@@ -1,22 +1,13 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(){
-    // string s = "leetcode";
-    // int ss = s.size();
-    // int indexof[26];
-    // for(auto &x: indexof){
-    //     x = ss + 1;
-    //     cout << x << endl;
-    // }
-    // int a = 'z' - 'a';
-    // cout << a;
-    
-    // string s = "A man, a plan, a canal: Panama";
-    // transform(s.begin(),s.end(),s.begin(),::tolower);
-    // cout << s;
-    int aa = '9' - 'a';
-    cout << aa;
+    int n = 7;
+    vector<int> a(n, -1), b(n, n);
+    for (int i=0;i<n;i++) {
+        cout << "A: " << a[i] << endl;
+        cout << "B: " << b[i] << endl;
+    }
 
     return 0;
 }
